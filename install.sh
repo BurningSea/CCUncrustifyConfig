@@ -10,10 +10,11 @@ unzip -oq UncrustifyPlugin.zip
 rm UncrustifyPlugin.zip
 rm -rf __MACOSX
 
-echo "\nBBUncrustifyPlugin successfuly installed! Please restart your Xcode."
+echo "\nBBUncrustifyPlugin successfuly installed!"
 
 CONFIG_URI=https://github.com/BurningSea/CCUncrustifyConfig.git
 CONFIG_DIR="${HOME}/.uncrustify"
 mkdir -p "${CONFIG_DIR}"
 git clone $CONFIG_URI "${CONFIG_DIR}"
 
+echo "\nConfig successfuly cloned! Plz restart your Xcode and \nselect Uncrustify for the Formatter in Edit->Format Code->Preferences"
