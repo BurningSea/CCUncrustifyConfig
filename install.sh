@@ -1,0 +1,19 @@
+#!/bin/sh
+
+DOWNLOAD_URI=https://github.com/benoitsan/BBUncrustifyPlugin-Xcode/releases/download/2.1.6/UncrustifyPlugin-2.1.6.zip
+PLUGINS_DIR="${HOME}/Library/Application Support/Developer/Shared/Xcode/Plug-ins"
+
+mkdir -p "${PLUGINS_DIR}"
+cd "${PLUGINS_DIR}"
+curl -SL $DOWNLOAD_URI > UncrustifyPlugin.zip
+unzip -oq UncrustifyPlugin.zip
+rm UncrustifyPlugin.zip
+rm -rf __MACOSX
+
+echo "\nBBUncrustifyPlugin successfuly installed! Please restart your Xcode."
+
+CONFIG_URI=https://github.com/BurningSea/CCUncrustifyConfig.git
+CONFIG_DIR="${HOME}/.uncrustify"
+mkdir -p "${CONFIG_DIR}"
+git clone $CONFIG_URI "${CONFIG_DIR}"
+
