@@ -17,4 +17,5 @@ CONFIG_DIR="${HOME}/.uncrustify"
 mkdir -p "${CONFIG_DIR}"
 git clone $CONFIG_URI "${CONFIG_DIR}"
 
-echo "\nConfig successfuly cloned! Plz restart your Xcode and \nselect Uncrustify for the Formatter in Edit->Format Code->Preferences"
+echo "\nConfig successfuly cloned! Plz restart your Xcode and \nSelect Clang for the Formatter in Edit->Format Code->Preferences\nAnd select Custom Style (File) for Clange Style"
+echo "\nFinally copy ~/.uncrustify/.clang-format to your Project! Enjoy it."
